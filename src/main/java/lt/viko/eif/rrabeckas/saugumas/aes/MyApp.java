@@ -13,16 +13,19 @@ public class MyApp {
 
         String originalString = inputMessage();
         String encryptedString = "";
-        String choice = getChoice();
-        if (choice.equals("encrypt")) {
-            encryptedString = AES.encrypt(originalString, secretKey);
-            System.out.println(originalString);
-            System.out.println(encryptedString);
-            saveToFile(encryptedString);
-        } else if (choice.equals("decrypt")) {
-            String decryptedString = AES.decrypt(encryptedString, secretKey);
-            System.out.println(originalString);
-            System.out.println(decryptedString);
+        while (true) {
+            String choice = getChoice();
+            if (choice.equals("encrypt")) {
+                encryptedString = AES.encrypt(originalString, secretKey);
+                System.out.println(originalString);
+                System.out.println(encryptedString);
+                saveToFile(encryptedString);
+            } else if (choice.equals("decrypt")) {
+                encryptedString = AES.encrypt(originalString, secretKey);
+                String decryptedString = AES.decrypt(encryptedString, secretKey);
+                System.out.println(originalString);
+                System.out.println(decryptedString);
+            }
         }
     }
 
