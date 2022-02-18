@@ -3,12 +3,7 @@ package lt.viko.eif.rrabeckas.saugumas.aes;
 import java.util.Scanner;
 
 public class MyApp {
-    //    public static void main(String[] args) {
-//        EncryptionApp app = new EncryptionApp();
-//        app.run();
-//        System.out.println("App stopped");
-//
-//    }
+
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
